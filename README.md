@@ -22,6 +22,11 @@ how their implementation differs.
 
 ### **Overview**
 
+There are several different virtual networking modes in VirtualBox and
+they are listed below. Each mode can be used for a variety of scenarios
+for providing connectivity between the host machine and other guest
+VMs.
+
 ### **Network Address Translation (NAT)**
 
 NAT stands for Network Address Translation and is the simplest
@@ -43,27 +48,26 @@ reach a virtual machine.
 
 ### **Bridged**
 
-Bridged is the simplest form of virtual networking on
-VirtualBox. NAT allows for external communication to the
-outside world but does not allow for exteranl traffic to
-reach a virtual machine.
+Bridged is the most advanced form of virtual networking on
+VirtualBox. Bridged allows for external communication to the
+outside world and does so by directly attaching to the
+physical network card, thus bypassing the host OS's network
+stack.
 
 --------------------------------------------
 
 ### **Internal Networking**
 
-Bridged is the simplest form of virtual networking on
-VirtualBox. NAT allows for external communication to the
-outside world but does not allow for exteranl traffic to
-reach a virtual machine.
+Internal networking allows for a network in software that
+can connect virtual machines together isolated from any
+other host applications or external traffic.
 
 --------------------------------------------
 
 ### **Host-Only Networking**
 
-Host-Only networking is the simplest form of virtual
-networking on VirtualBox. NAT allows for external
-communication to the outside world but does not allow
-for exteranl traffic to reach a virtual machine.
-
---------------------------------------------
+Host-Only networking allows guest virtual machines and the
+host to communicate with one another. This virtual networking
+mode does not use the host's physical network interface but
+instead uses a software-based virtual network to establish
+connectivity.
