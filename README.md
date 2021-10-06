@@ -39,10 +39,12 @@ machine.
 
 ### **NAT Service**
 
-NAT Service is the simplest form of virtual networking on
-VirtualBox. NAT allows for external communication to the
-outside world but does not allow for exteranl traffic to
-reach a virtual machine.
+NAT Service is an advanced form of virtualized networking on
+VirtualBox. It acts like a router connecting the host and
+all virtual machines with each other, but prohibiting any direct
+communication with any virtual machine from outside the network.
+It does allow, however for external communication to the outside
+world from a given virtual machine on the network.
 
 --------------------------------------------
 
@@ -52,7 +54,9 @@ Bridged is the most advanced form of virtual networking on
 VirtualBox. Bridged allows for external communication to the
 outside world and does so by directly attaching to the
 physical network card, thus bypassing the host OS's network
-stack.
+stack. This method is the least secure and is typically used
+to test the behavior and performance of software servers and
+services on a virtual machine.
 
 --------------------------------------------
 
